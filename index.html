@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cooking Street – Jeu de Cuisine en Ligne</title>
+  <meta name="description" content="Jouez à Cooking Street ! Servez vos clients, cuisinez vite et devenez le meilleur chef de rue.">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="logo">🍳</div>
+    <span class="brand">Cooking Street</span>
+
+    <div class="right-controls">
+      <button id="muteBtn" class="music-btn" title="Activer/Désactiver la musique">🔊</button>
+      <button id="burger" class="burger" aria-label="Menu">☰</button>
+    </div>
+
+    <nav id="drawer" class="drawer" aria-hidden="true">
+  <a href="#play">🎮 Jouer</a>
+  <a href="#how">🧑‍🍳 Comment jouer</a>
+  <a href="#more">🕹️ Autres jeux</a>
+  <hr class="drawer-divider">
+  <a href="#confidentialite">🔒 Politique de Confidentialité</a>
+  <a href="#conditions">📜 Conditions d’utilisation</a>
+  
+  </header>
+
+
+  <!-- HERO -->
+<section class="hero">
+
+  <div class="hero-content">
+       <img src="../assets/hero.jpg" alt="hero-logo" class="hero-logo">
+    <div class="hero-text">
+      <h1>COOKING STREET</h1>
+      <button id="scrollToPlay" class="btn primary">JOUER</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="container">
+    <section id="play" class="card card--frame">
+      <div class="frame-head">
+        <h2>Jouer maintenant</h2>
+        <button id="fsBtn" class="btn small">⤢ Plein écran</button>
+      </div>
+
+      <div class="frame-wrap">
+        <div id="preloader" class="preloader">
+          <div class="spinner"></div>
+          <p>Chargement du jeu…</p>
+        </div>
+        <iframe id="game"
+          src="https://games-dun-one.vercel.app/CookingStreet/index.html"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section id="how" class="card">
+      <div class="pill">SERVEZ 🍳 CUISINEZ 🍳 GAGNEZ 🍳</div>
+      <h2>Devenez le chef de rue ultime !</h2>
+      <p class="lead">
+        Prenez les commandes de votre food-truck ! Préparez des plats savoureux, servez vos clients à temps et
+        gérez votre restaurant de rue. Chaque niveau teste vos réflexes et votre sens de l’organisation.
+      </p>
+      <div class="actions">
+        <a href="#play" class="btn primary">JOUER MAINTENANT</a>
+        <a href="#how" class="btn ghost">EN SAVOIR PLUS</a>
+      </div>
+      <ul class="chips">
+        <li class="chip">Cuisine</li>
+        <li class="chip">Gestion</li>
+        <li class="chip">Rapidité</li>
+      </ul>
+    </section>
+
+    <section id="more" class="more">
+      <h3 class="section-title">Découvrez plus de jeux</h3>
+      <div class="grid">
+        <article class="gamecard blue">
+          <h4>Burger Rush</h4>
+          <p>Assemblez des burgers à toute vitesse et servez vos clients !</p>
+        </article>
+        <article class="gamecard orange">
+          <h4>Fruit Party Chef</h4>
+          <p>Combinez des fruits colorés pour créer des desserts explosifs.</p>
+        </article>
+        <article class="gamecard purple">
+          <h4>Pizza Express</h4>
+          <p>Préparez et livrez vos pizzas avant la fin du chrono.</p>
+        </article>
+      </div>
+      <div class="cta">
+        <a href="#play" class="btn xl primary">COMMENCER À JOUER</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+      <div class="about-wrapper">
+        <div class="about-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/649/649395.png" alt="Équipe Cooking Street">
+        </div>
+
+        <div class="about-content">
+          <h3 class="section-title">À propos de nous</h3>
+          <p class="about-intro">
+            Bienvenue dans <strong>Cooking Street</strong> — un monde où la passion culinaire rencontre le fun du jeu vidéo !
+          </p>
+          <p class="about-text">
+            Nous sommes une <strong>équipe indépendante</strong> d’artistes, de développeurs et de passionnés de cuisine.
+            Notre mission : transformer chaque partie en aventure gourmande, pleine de rires et de créativité.
+          </p>
+          <p class="about-text">
+            De la conception du premier burger virtuel 🍔 à la musique envoûtante de votre food-truck,
+            chaque détail a été pensé pour offrir une <em>expérience unique, joyeuse et délicieuse.</em>
+          </p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <h4>+500k</h4>
+              <p>Joueurs dans le monde</p>
+            </div>
+            <div class="stat">
+              <h4>15+</h4>
+              <p>Jeux de cuisine créés</p>
+            </div>
+            <div class="stat">
+              <h4>2025</h4>
+              <p>Année de création</p>
+            </div>
+          </div>
+
+          <a href="#comments" class="btn primary about-btn">Laissez votre avis 🍳</a>
+        </div>
+      </div>
+    </section>
+
+   
+  <!-- LEGAL SECTIONS -->
+<section id="legal" class="legal-section">
+  <div class="legal-container">
+    <h2 class="section-title">Informations Légales</h2>
+
+    <div class="legal-cards">
+      
+      <!-- Confidentialité -->
+      <article id="confidentialite" class="legal-card">
+        <h3 class="legal-title">🔒 Politique de Confidentialité</h3>
+        <p>
+          Chez <strong>Cooking Street</strong>, nous respectons votre vie privée 🍳. 
+          Les données collectées (comme les préférences de jeu ou le temps de session) 
+          servent uniquement à <strong>améliorer votre expérience</strong>. 
+          Aucune donnée personnelle n’est vendue ou partagée à des tiers.  
+        </p>
+        <p>
+          Nous utilisons des cookies pour garder votre progression et adapter le site à votre appareil. 
+          Vous pouvez à tout moment effacer ces données via les paramètres de votre navigateur.
+        </p>
+        <a href="#" class="btn ghost">En savoir plus</a>
+      </article>
+
+      <!-- Conditions d’utilisation -->
+      <article id="conditions" class="legal-card">
+        <h3 class="legal-title">📜 Conditions d’utilisation</h3>
+        <p>
+          En jouant à <strong>Cooking Street</strong>, vous acceptez d’utiliser ce jeu à des fins de divertissement uniquement.  
+          Il est interdit de modifier, revendre ou distribuer le jeu sans autorisation.  
+          Nous nous réservons le droit d’améliorer ou de retirer certaines fonctionnalités à tout moment.
+        </p>
+        <p>
+          Cooking Street est un univers de jeu 100% fun, sans collecte de paiement ni publicité intrusive. 
+          Notre objectif : <strong>offrir une expérience culinaire ludique et accessible à tous</strong> !
+        </p>
+        <a href="#" class="btn ghost">Lire les détails</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+ <!-- COMMENTS -->
+    <section id="comments" class="card comments">
+      <h3 class="section-title">Vos avis et expériences</h3>
+      <p class="lead">
+        Partagez votre opinion sur le jeu <strong>Cooking Street</strong> !
+        Vos retours nous aident à améliorer votre expérience et à rendre la cuisine encore plus fun 🍳
+      </p>
+
+      <form id="commentForm" class="comment-form">
+        <input type="text" id="name" placeholder="Votre nom" required>
+        <textarea id="message" placeholder="Votre avis..." required></textarea>
+
+        <div class="stars">
+          <label>Votre note :</label>
+          <div id="starContainer">
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary">Envoyer</button>
+      </form>
+
+      <div id="commentList" class="comment-list"></div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Cooking Street | Tous droits réservés</p>
+  </footer>
+</body>
+</html>

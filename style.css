@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600;800&display=swap');
+
+:root {
+  --bg:#2c1608;--bg2:#5e2e12;--text:#fff;
+  --accent:#ff9e18;--accent2:#ffce54;--ink:#241200;
+  --card:#3e1a07;--shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,var(--bg2),var(--bg));}
+
+/* HEADER */
+.topbar{
+  position:sticky;top:0;z-index:40;
+  background:linear-gradient(90deg,#ff9e18,#ffce54);
+  padding:.7rem 1rem;border-bottom:3px solid #000;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:var(--shadow);
+}
+.brand{font-weight:900;color:#000;}
+.burger{all:unset;cursor:pointer;font-size:28px;padding:.3rem .6rem;border-radius:10px;background:#0002}
+.drawer{
+  position:fixed;right:1rem;top:60px;background:#3e1a07;border-radius:12px;
+  padding:.5rem;display:none;flex-direction:column;gap:.4rem;
+}
+.drawer a{
+  color:#fff;text-decoration:none;padding:.3rem .6rem;border-radius:.6rem;
+}
+.drawer a:hover{background:#ffffff1a;}
+.drawer-divider {
+  border: none;
+  border-top: 1px solid #ffffff33;
+  margin: 0.4rem 0;
+  opacity: 0.7;
+}
+
+.drawer.open{display:flex}
+
+
+/* --- LEGAL SECTION --- */
+.legal-section {
+  background: linear-gradient(180deg, #3e1a07, #2c1608);
+  padding: 3rem 1rem;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.legal-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.legal-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.legal-card {
+  flex: 1 1 420px;
+  background: var(--card);
+  border: 3px solid #000;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.legal-title {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: var(--accent2);
+  text-shadow: 2px 2px 0 #000;
+}
+
+.legal-card p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.legal-card .btn.ghost {
+  border: 2px solid var(--accent2);
+  color: var(--accent2);
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.legal-card .btn.ghost:hover {
+  background: var(--accent2);
+  color: #000;
+  transform: scale(1.05);
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, var(--bg2), var(--bg));
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 90px;
+  border: 2px solid #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero-text {
+  text-align: left;
+  
+}
+
+.hero-text h1 {
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-shadow: 3px 3px 0 #000000;
+
+}
+
+
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+.fullscreen-badge{
+  position:absolute;right:25px;top:20px;background:#0008;color:#fff;
+  border:none;border-radius:10px;padding:.4rem .6rem;cursor:pointer;font-size:18px;
+}
+.btn{
+  border:none;cursor:pointer;padding:.9rem 1.2rem;border-radius:14px;font-weight:800;
+}
+.primary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));color:var(--ink);
+}
+.btn.small{padding:.45rem .7rem;font-weight:700}
+.btn.xl{padding:1rem 1.4rem;font-size:1.05rem}
+.ghost{background:transparent;border:2px solid #fff;color:#fff}
+.btn:hover{filter:brightness(1.1)}
+
+/* GAME */
+.container{max-width:1200px;margin:1.2rem auto;padding:0 1rem}
+.card{
+  background:var(--card);border:2px solid #000;border-radius:18px;
+  padding:1.2rem;box-shadow:var(--shadow);margin:1.2rem 0;
+}
+.card--frame{padding:0}
+.frame-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem;border-bottom:2px solid #000;
+}
+.frame-wrap{position:relative;padding:1rem}
+iframe#game{
+  width:100%;height:min(68vh,680px);border-radius:14px;border:4px solid #000;
+  background:#000;box-shadow:var(--shadow);
+}
+.preloader{
+  position:absolute;inset:1rem;border-radius:14px;display:grid;place-items:center;
+  background:#0008;backdrop-filter:blur(2px);
+}
+.spinner{
+  width:46px;height:46px;border:4px solid #fff3;border-top-color:var(--accent);
+  border-radius:50%;animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* HOW */
+.pill{
+  display:inline-block;background:#ff9e18;color:#000;border-radius:14px;
+  padding:.4rem .8rem;font-weight:800;box-shadow:0 4px 0 #0003;
+}
+.lead{margin-top:.8rem}
+.actions{
+  display:flex;gap:.6rem;margin:1rem 0;flex-wrap:wrap;
+}
+.chips{
+  display:flex;gap:.5rem;list-style:none;flex-wrap:wrap;
+}
+.chip{
+  padding:.3rem .7rem;border-radius:999px;font-weight:700;
+  background:#ffb347;color:#000;
+}
+
+/* MORE */
+.section-title{
+  font-family:"Luckiest Guy";font-size:2rem;margin:1rem 0;text-align:center;
+}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;
+}
+.gamecard{
+  border-radius:16px;border:3px solid #000;padding:1rem;color:#000;background:#fff;
+}
+.gamecard.blue{background:linear-gradient(135deg,#fff0,#8dd3ff)}
+.gamecard.orange{background:linear-gradient(135deg,#ffb347,#ff7a18)}
+.gamecard.purple{background:linear-gradient(135deg,#caa0ff,#7e4fff)}
+.cta{display:grid;place-items:center;margin:1.5rem 0}
+
+/* COMMENTS */
+.comment-form{
+  display:flex;flex-direction:column;gap:.8rem;margin:1rem 0;
+}
+.comment-form input,
+.comment-form textarea{
+  width:100%;padding:.7rem;border-radius:10px;border:2px solid #000;
+  font-family:Poppins,sans-serif;font-size:1rem;
+}
+.comment-form textarea{min-height:100px;resize:vertical;}
+.stars{
+  display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;
+}
+.star{
+  font-size:1.6rem;cursor:pointer;transition:transform .2s;
+}
+.star:hover{transform:scale(1.3);}
+.star.active{filter:drop-shadow(0 0 5px gold);}
+.comment-list{
+  margin-top:1rem;display:grid;gap:1rem;
+}
+.comment{
+  background:#fff1;border-radius:10px;padding:.8rem 1rem;border:2px solid #000;
+}
+.comment strong{color:var(--accent2);font-size:1.1rem;}
+.comment small{opacity:.8;font-size:.8rem;}
+
+/* --- ABOUT SECTION --- */
+.about-section{
+  background:linear-gradient(180deg,#3e1a07,#5e2e12);
+  border:3px solid #000;border-radius:18px;
+  box-shadow:var(--shadow);margin:2rem auto;padding:2rem 1rem;
+  color:var(--text);overflow:hidden;
+}
+.about-wrapper{
+  display:flex;flex-wrap:wrap;align-items:center;gap:2rem;
+  max-width:1100px;margin:auto;
+}
+.about-image{
+  flex:1 1 380px;display:flex;justify-content:center;
+}
+.about-image img{
+  width:100%;max-width:420px;border-radius:16px;border:3px solid #000;
+  box-shadow:0 10px 20px rgba(0,0,0,0.5);transition:transform 0.3s ease;
+}
+.about-image img:hover{transform:scale(1.05);}
+.about-content{flex:1 1 480px;}
+.about-intro{
+  font-family:"Luckiest Guy",cursive;font-size:1.6rem;color:var(--accent2);
+  text-shadow:2px 2px 0 #000;margin-bottom:1rem;
+}
+.about-text{
+  line-height:1.7;margin-bottom:1rem;font-size:1.05rem;
+}
+.about-stats{
+  display:flex;gap:1.5rem;flex-wrap:wrap;margin:1.5rem 0;
+}
+.stat{
+  background:#fff2;border:2px solid #000;border-radius:14px;padding:.8rem 1.2rem;
+  flex:1 1 120px;text-align:center;transition:transform .3s ease;
+}
+.stat:hover{
+  transform:translateY(-5px);background:#ff9e18;color:#000;
+}
+.stat h4{
+  font-size:1.8rem;color:var(--accent2);margin-bottom:.3rem;
+  font-family:"Luckiest Guy";
+}
+.about-btn{
+  display:inline-block;margin-top:1rem;font-size:1.1rem;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* FOOTER */
+.footer{text-align:center;opacity:.9;padding:1rem 0}
+
+/* --- HEADER FIX --- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: linear-gradient(90deg, #ff6918, #ffce54);
+  padding: .7rem 1rem;
+  border-bottom: 3px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+}
+
+/* LOGO + NOM */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* CONTENEUR DROITE (BOUTON SON + MENU) */
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+/* BOUTON SON (STYLÉ) */
+.music-btn {
+  all: unset;
+  cursor: pointer;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffce54, #ff9e18);
+  color: #000;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #000;
+  box-shadow: 0 0 12px rgba(255, 158, 24, 0.6),
+              inset 0 0 6px rgba(255, 206, 84, 0.8);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+.music-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 25px rgba(255, 158, 24, 0.8),
+              inset 0 0 10px rgba(255, 206, 84, 1);
+}
+
+/* Effet pulsation quand musique active */
+.music-btn.playing::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 158, 24, 0.8);
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* MENU BURGER */
+.burger {
+  all: unset;
+  cursor: pointer;
+  font-size: 22px;
+  padding: .4rem .7rem;
+  border-radius: 10px;
+  background: #0002;
+  color: #000;
+  border: 2px solid transparent;
+  transition: background 0.3s ease, transform 0.2s;
+}
+.burger:hover {
+  background: #0003;
+  transform: scale(1.05);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Petits écrans (mobiles ≤ 600px) */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .topbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .6rem .8rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .right-controls {
+    gap: .4rem;
+  }
+
+  .music-btn,
+  .burger {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-logo {
+    width: 90px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: .9rem;
+    padding: .7rem 1rem;
+  }
+
+  iframe#game {
+    height: 55vh;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 300px;
+  }
+
+  .legal-cards {
+    flex-direction: column;
+  }
+
+  .stat {
+    flex: 1 1 100%;
+  }
+
+  .drawer {
+    right: .5rem;
+    top: 55px;
+    width: 75%;
+  }
+}
+
+/* Tablettes (600px – 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  iframe#game {
+    height: 60vh;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .legal-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .drawer {
+    right: 1rem;
+    top: 60px;
+    width: 50%;
+  }
+}
+
+/* Écrans larges (≥ 1025px) */
+@media (min-width: 1025px) {
+  .hero-content {
+    flex-direction: row;
+  }
+
+  .about-wrapper {
+    flex-direction: row;
+  }
+
+  .legal-cards {
+    flex-direction: row;
+  }
+}
+
